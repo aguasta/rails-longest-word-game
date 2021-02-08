@@ -1,0 +1,30 @@
+
+<div class= "container">
+
+
+<h1>New Game</h1>
+
+</div>
+
+<div class= "container">
+
+<%= @letters %>
+
+</div>
+
+
+<div class= "container">
+
+<form action="/score" method="post">
+    <%= hidden_field_tag :letters, @letters %>
+    <label for="wordInput">What is the longest word you can find?</label>
+    <div class="form-group d-flex justify-content-center flex-grow-1">
+      <input type="text" name="word" placeholder="Word" class="form-control">
+      <input type="submit" value="Play!" class="btn btn-primary">
+    </div>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  </form>
+
+</div>
+
+
